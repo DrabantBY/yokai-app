@@ -1,0 +1,107 @@
+[
+  {
+    "name": "bakeneko",
+    "image": "bakeneko.png",
+    "danger": "#05df72",
+    "location": "Abandoned houses and temples",
+    "status": "caught"
+  },
+  {
+    "name": "fukurokuju",
+    "image": "fukurokuju.png",
+    "danger": "#05df72",
+    "location": "Sacred mountains and forests",
+    "status": "caught"
+  },
+  {
+    "name": "gashadokuro",
+    "image": "gashadokuro.png",
+    "danger": "#05df72",
+    "location": "Battlefields and cemeteries",
+    "status": "caught"
+  },
+  {
+    "name": "harionago",
+    "image": "harionago.png",
+    "danger": "#05df72",
+    "location": "City alleys and dark streets",
+    "status": "caught"
+  },
+  {
+    "name": "hitotsume",
+    "image": "hitotsume.png",
+    "danger": "#05df72",
+    "location": "Mountain paths and trails",
+    "status": "caught"
+  },
+  {
+    "name": "isoonna",
+    "image": "isoonna.png",
+    "danger": "#05df72",
+    "location": "Rocky shores and beaches",
+    "status": "caught"
+  },
+  {
+    "name": "karakasa",
+    "image": "karakasa.png",
+    "danger": "#05df72",
+    "location": "Old warehouses and attics",
+    "status": "caught"
+  },
+  {
+    "name": "kitsune",
+    "image": "kitsune.png",
+    "danger": "#05df72",
+    "location": "Shrines and sacred places",
+    "status": "caught"
+  },
+  {
+    "name": "kuchisake",
+    "image": "kuchisake.png",
+    "danger": "#05df72",
+    "location": "Urban bridges and underpasses",
+    "status": "caught"
+  },
+  {
+    "name": "oni",
+    "image": "oni.png",
+    "danger": "#05df72",
+    "location": "Mountain caves and ravines",
+    "status": "caught"
+  },
+  {
+    "name": "onibi",
+    "image": "onibi.png",
+    "danger": "#05df72",
+    "location": "Swamps and marshes",
+    "status": "caught"
+  },
+  {
+    "name": "rokurokubi",
+    "image": "rokurokubi.png",
+    "danger": "#05df72",
+    "location": "Traditional inns and houses",
+    "status": "caught"
+  },
+  {
+    "name": "satori",
+    "image": "satori.png",
+    "danger": "#05df72",
+    "location": "Mountain forests and woods",
+    "status": "caught"
+  },
+  {
+    "name": "suzuhiko",
+    "image": "suzuhiko.png",
+    "danger": "#05df72",
+    "location": "Bamboo forests and clearings",
+    "status": "caught"
+  },
+  {
+    "name": "tengu",
+    "image": "tengu.png",
+    "danger": "#05df72",
+    "location": "Mountain peaks and cliffs",
+    "status": "caught"
+  }
+]
