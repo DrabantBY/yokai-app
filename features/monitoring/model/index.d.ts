@@ -1,9 +1,12 @@
 export namespace YokaiType {
+  type State = {
+    danger: "low" | "critical";
+    status: "caught" | "active";
+  };
+
   type Card = {
     name: string;
     image: string;
-    danger: "low" | "critical";
     location: string;
-    status: "caught" | "active";
-  };
+  } & State;
 }

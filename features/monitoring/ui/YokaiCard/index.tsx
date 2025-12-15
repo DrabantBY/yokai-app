@@ -2,20 +2,18 @@
 
 import type { YokaiType } from "@monitoring/model";
 
-import { Activity, memo, useState } from "react";
+import { memo, useState } from "react";
 
 import Image from "next/image";
 
 import styles from "./styles.module.scss";
 
-const STATUS_MODE = {
-  active: "visible",
-  caught: "hidden",
-} as const;
-
 export const YokaiCard = memo(
   ({ name, image, status, location, danger }: YokaiType.Card) => {
-    const [mode, setMode] = useState(() => STATUS_MODE[status]);
+    const [state, setState] = useState<YokaiType.State>(() => ({
+      status,
+      danger,
+    }));
 
     return (
       <li className={styles.yokaiCard}>
@@ -37,20 +35,23 @@ export const YokaiCard = memo(
           <span>Location:</span>
           {location}
         </p>
-        <p className={styles.yokaiText}>
-          <span>Danger:</span>
-          {danger}
-        </p>
 
-        <Activity mode={mode}>
-          <button
-            className={styles.yokaiAction}
-            type="button"
-            onClick={() => setMode("hidden")}
+        <div className={styles.yokaiControls}>
+          <span
+            className={`${state.danger === "critical" ? styles.yokaiDangerCritical : styles.yokaiDangerLow}`}
           >
-            capture
+            {state.danger}
+          </span>
+
+          <button
+            className={styles.yokaiStatus}
+            type="button"
+            disabled={state.status === "caught"}
+            onClick={() => setState({ status: "caught", danger: "low" })}
+          >
+            {state.status === "caught" ? state.status : "catch"}
           </button>
-        </Activity>
+        </div>
       </li>
     );
   },

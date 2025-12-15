@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { Inter_Tight } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 import { TanStackQueryProvider } from "@/providers";
 
 import "./globals.scss";
 
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
+const roboto = Roboto({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable}`}>
+      <body className={`${roboto.className}`}>
         <TanStackQueryProvider>
           <div id="root">
             <main>{children}</main>

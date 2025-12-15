@@ -2,106 +2,106 @@
   {
     "name": "bakeneko",
     "image": "/bakeneko.png",
-    "danger": "low",
-    "location": "Abandoned houses and temples",
-    "status": "caught"
+    "danger": "critical",
+    "location": "Abandoned houses",
+    "status": "active"
   },
   {
     "name": "fukurokuju",
     "image": "/fukurokuju.png",
     "danger": "low",
-    "location": "Sacred mountains and forests",
-    "status": "caught"
+    "location": "Sacred mountains",
+    "status": "active"
   },
   {
     "name": "gashadokuro",
     "image": "/gashadokuro.png",
     "danger": "low",
-    "location": "Battlefields and cemeteries",
-    "status": "caught"
+    "location": "Battlefields",
+    "status": "active"
   },
   {
     "name": "harionago",
     "image": "/harionago.png",
     "danger": "low",
-    "location": "City alleys and dark streets",
-    "status": "caught"
+    "location": "City alleys",
+    "status": "active"
   },
   {
     "name": "hitotsume",
     "image": "/hitotsume.png",
     "danger": "low",
-    "location": "Mountain paths and trails",
-    "status": "caught"
+    "location": "Mountain paths",
+    "status": "active"
   },
   {
     "name": "isoonna",
     "image": "/isoonna.png",
     "danger": "low",
-    "location": "Rocky shores and beaches",
-    "status": "caught"
+    "location": "Rocky shores",
+    "status": "active"
   },
   {
     "name": "karakasa",
     "image": "/karakasa.png",
     "danger": "low",
-    "location": "Old warehouses and attics",
-    "status": "caught"
+    "location": "Old warehouses",
+    "status": "active"
   },
   {
     "name": "kitsune",
     "image": "/kitsune.png",
     "danger": "low",
-    "location": "Shrines and sacred places",
-    "status": "caught"
+    "location": "Shrines",
+    "status": "active"
   },
   {
     "name": "kuchisake",
     "image": "/kuchisake.png",
     "danger": "low",
-    "location": "Urban bridges and underpasses",
-    "status": "caught"
+    "location": "Urban bridges",
+    "status": "active"
   },
   {
     "name": "oni",
     "image": "/oni.png",
     "danger": "low",
-    "location": "Mountain caves and ravines",
-    "status": "caught"
+    "location": "Mountain caves",
+    "status": "active"
   },
   {
     "name": "onibi",
     "image": "/onibi.png",
     "danger": "low",
-    "location": "Swamps and marshes",
-    "status": "caught"
+    "location": "Swamps",
+    "status": "active"
   },
   {
     "name": "rokurokubi",
     "image": "/rokurokubi.png",
     "danger": "low",
-    "location": "Traditional inns and houses",
-    "status": "caught"
+    "location": "Traditional inns",
+    "status": "active"
   },
   {
     "name": "satori",
     "image": "/satori.png",
     "danger": "low",
-    "location": "Mountain forests and woods",
-    "status": "caught"
+    "location": "Mountain forests",
+    "status": "active"
   },
   {
     "name": "suzuhiko",
     "image": "/suzuhiko.png",
     "danger": "low",
-    "location": "Bamboo forests and clearings",
-    "status": "caught"
+    "location": "Bamboo forests",
+    "status": "active"
   },
   {
     "name": "tengu",
     "image": "/tengu.png",
     "danger": "low",
-    "location": "Mountain peaks and cliffs",
-    "status": "caught"
+    "location": "Mountain peaks",
+    "status": "active"
   }
 ]
