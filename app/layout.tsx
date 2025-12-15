@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+
 import { Inter_Tight } from "next/font/google";
+
+import { TanStackQueryProvider } from "@/providers";
+
 import "./globals.scss";
 
 const interTight = Inter_Tight({
@@ -8,19 +13,23 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Yokai App",
+  title: "Home | Yokai App",
   description: "test task from Green City Real Estate",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`${interTight.variable}`}>
-        <main>{children}</main>
+        <TanStackQueryProvider>
+          <div id="root">
+            <main>{children}</main>
+          </div>
+        </TanStackQueryProvider>
       </body>
     </html>
   );
