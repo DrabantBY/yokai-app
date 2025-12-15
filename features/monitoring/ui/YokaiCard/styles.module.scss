@@ -1,0 +1,55 @@
+.yokaiCard {
+  padding-inline: 8px;
+  padding-block: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 0 8px 0 currentColor;
+  border-radius: 24px;
+  corner-shape: squircle;
+}
+
+.yokaiFigure {
+  position: relative;
+  inline-size: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+
+
+  & > img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.yokaiTitle {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.yokaiText {
+  display: flex;
+align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  text-transform: initial;
+
+  &:first-of-type {
+    flex-grow: 1;
+    line-height: 1.2;
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  &:last-of-type {
+    margin-block-end: 8px;
+  }
+
+  & > span {
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+}
