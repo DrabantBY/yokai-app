@@ -2,18 +2,12 @@
   padding-inline: 8px;
   padding-block: 8px;
   display: flex;
-  flex-direction: column;
   gap: 12px;
   color: var(--clr-primary-text);
   box-shadow: 0 0 8px 0 currentColor;
   border-radius: 24px;
   corner-shape: squircle;
 
-  & > hr {
-    border: 0;
-    border-top: 1px solid;
-    color: currentColor;
-  }
 
 
   &:hover {
@@ -21,12 +15,10 @@
   }
 }
 
-
-
-
 .yokaiFigure {
+  flex-shrink: 0;
   position: relative;
-  inline-size: 100%;
+  block-size: 100%;
   aspect-ratio: 1;
   overflow: hidden;
 
@@ -36,20 +28,22 @@
   }
 }
 
+.yokaiBody {
+  flex-grow: 1;
+  display: grid;
+  row-gap: 4px;
+}
+
 .yokaiTitle {
   font-size: 18px;
   font-weight: 700;
-  text-align: center;
+  border-bottom: 1px solid currentColor;
 }
-
 
 .yokaiText {
   display: flex;
-  flex-direction: column;
   gap: 4px;
-  flex-wrap: wrap;
   font-size: 14px;
-  font-weight: 300;
   text-transform: initial;
   flex-grow: 1;
   line-height: 1.2;
@@ -90,6 +84,7 @@
 .yokaiDangerCritical {
   color: var(--clr-secondary-text);
   background-color: var(--clr-secondary-danger);
+  animation: scale 0.5s ease-in-out infinite;
 }
 
 .yokaiStatus {
@@ -99,9 +94,21 @@
 
   &:disabled {
     opacity: 0.4;
+    cursor: not-allowed;
   }
 
   &:hover:not(:disabled) {
     opacity: 0.8;
   }
 }
+
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+

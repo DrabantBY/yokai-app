@@ -1,20 +1,24 @@
 "use client";
 
-import type { YokaiType } from "@monitoring/model";
+import type { YokaiType } from "@monitoring/model/types";
 
-import { memo, useState } from "react";
+import { memo } from "react";
+
+import { YOKAI_DANGER, YOKAI_STATUS } from "@monitoring/model/enums";
 
 import Image from "next/image";
 
 import styles from "./styles.module.scss";
 
 export const YokaiCard = memo(
-  ({ name, image, status, location, danger }: YokaiType.Card) => {
-    const [state, setState] = useState<YokaiType.State>(() => ({
-      status,
-      danger,
-    }));
-
+  ({
+    name,
+    image,
+    status,
+    location,
+    danger,
+    mutate,
+  }: YokaiType.Card & { mutate: (body: YokaiType.Body) => void }) => {
     return (
       <li className={styles.yokaiCard}>
         <figure className={styles.yokaiFigure}>
@@ -27,30 +31,38 @@ export const YokaiCard = memo(
           />
         </figure>
 
-        <h2 className={styles.yokaiTitle}>{name}</h2>
+        <div className={styles.yokaiBody}>
+          <h2 className={styles.yokaiTitle}>{name}</h2>
 
-        <hr />
+          <p className={styles.yokaiText}>
+            <span>Location:</span>
+            {location}
+          </p>
 
-        <p className={styles.yokaiText}>
-          <span>Location:</span>
-          {location}
-        </p>
+          <div className={styles.yokaiControls}>
+            <span
+              key={danger}
+              className={`${danger === YOKAI_DANGER.CRITICAL ? styles.yokaiDangerCritical : styles.yokaiDangerLow}`}
+            >
+              {danger}
+            </span>
 
-        <div className={styles.yokaiControls}>
-          <span
-            className={`${state.danger === "critical" ? styles.yokaiDangerCritical : styles.yokaiDangerLow}`}
-          >
-            {state.danger}
-          </span>
-
-          <button
-            className={styles.yokaiStatus}
-            type="button"
-            disabled={state.status === "caught"}
-            onClick={() => setState({ status: "caught", danger: "low" })}
-          >
-            {state.status === "caught" ? state.status : "catch"}
-          </button>
+            <button
+              key={status}
+              className={styles.yokaiStatus}
+              type="button"
+              disabled={status === YOKAI_STATUS.CAPTURED}
+              onClick={() =>
+                mutate({
+                  name,
+                  status: YOKAI_STATUS.CAPTURED,
+                  danger: YOKAI_DANGER.LOW,
+                })
+              }
+            >
+              {status === YOKAI_STATUS.CAPTURED ? status : "CAPTURE"}
+            </button>
+          </div>
         </div>
       </li>
     );

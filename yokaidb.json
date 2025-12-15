@@ -1,107 +1,107 @@
 [
   {
-    "name": "bakeneko",
-    "image": "/bakeneko.png",
-    "danger": "critical",
-    "location": "Abandoned houses",
-    "status": "active"
-  },
-  {
-    "name": "fukurokuju",
-    "image": "/fukurokuju.png",
-    "danger": "low",
-    "location": "Sacred mountains",
-    "status": "active"
-  },
-  {
-    "name": "gashadokuro",
-    "image": "/gashadokuro.png",
-    "danger": "low",
-    "location": "Battlefields",
-    "status": "active"
-  },
-  {
-    "name": "harionago",
-    "image": "/harionago.png",
-    "danger": "low",
-    "location": "City alleys",
-    "status": "active"
-  },
-  {
-    "name": "hitotsume",
-    "image": "/hitotsume.png",
-    "danger": "low",
-    "location": "Mountain paths",
-    "status": "active"
-  },
-  {
-    "name": "isoonna",
-    "image": "/isoonna.png",
-    "danger": "low",
-    "location": "Rocky shores",
-    "status": "active"
-  },
-  {
-    "name": "karakasa",
-    "image": "/karakasa.png",
-    "danger": "low",
-    "location": "Old warehouses",
-    "status": "active"
-  },
-  {
-    "name": "kitsune",
-    "image": "/kitsune.png",
-    "danger": "low",
-    "location": "Shrines",
-    "status": "active"
-  },
-  {
-    "name": "kuchisake",
-    "image": "/kuchisake.png",
-    "danger": "low",
-    "location": "Urban bridges",
-    "status": "active"
-  },
-  {
-    "name": "oni",
-    "image": "/oni.png",
-    "danger": "low",
-    "location": "Mountain caves",
-    "status": "active"
-  },
-  {
-    "name": "onibi",
-    "image": "/onibi.png",
-    "danger": "low",
-    "location": "Swamps",
-    "status": "active"
-  },
-  {
-    "name": "rokurokubi",
-    "image": "/rokurokubi.png",
-    "danger": "low",
-    "location": "Traditional inns",
-    "status": "active"
-  },
-  {
     "name": "satori",
     "image": "/satori.png",
-    "danger": "low",
+    "danger": "LOW",
     "location": "Mountain forests",
-    "status": "active"
+    "status": "ACTIVE"
   },
   {
     "name": "suzuhiko",
     "image": "/suzuhiko.png",
-    "danger": "low",
+    "danger": "LOW",
     "location": "Bamboo forests",
-    "status": "active"
+    "status": "ACTIVE"
   },
   {
     "name": "tengu",
     "image": "/tengu.png",
-    "danger": "low",
+    "danger": "LOW",
     "location": "Mountain peaks",
-    "status": "active"
+    "status": "ACTIVE"
+  },
+  {
+    "name": "bakeneko",
+    "image": "/bakeneko.png",
+    "danger": "LOW",
+    "location": "Abandoned houses",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "fukurokuju",
+    "image": "/fukurokuju.png",
+    "danger": "LOW",
+    "location": "Sacred mountains",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "gashadokuro",
+    "image": "/gashadokuro.png",
+    "danger": "LOW",
+    "location": "Battlefields",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "harionago",
+    "image": "/harionago.png",
+    "danger": "LOW",
+    "location": "City alleys",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "hitotsume",
+    "image": "/hitotsume.png",
+    "danger": "LOW",
+    "location": "Mountain paths",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "isoonna",
+    "image": "/isoonna.png",
+    "danger": "LOW",
+    "location": "Rocky shores",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "karakasa",
+    "image": "/karakasa.png",
+    "danger": "LOW",
+    "location": "Old warehouses",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "kitsune",
+    "image": "/kitsune.png",
+    "danger": "LOW",
+    "location": "Shrines",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "kuchisake",
+    "image": "/kuchisake.png",
+    "danger": "LOW",
+    "location": "Urban bridges",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "oni",
+    "image": "/oni.png",
+    "danger": "LOW",
+    "location": "Mountain caves",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "onibi",
+    "image": "/onibi.png",
+    "danger": "LOW",
+    "location": "Swamps",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "rokurokubi",
+    "image": "/rokurokubi.png",
+    "danger": "LOW",
+    "location": "Traditional inns",
+    "status": "ACTIVE"
   }
 ]
