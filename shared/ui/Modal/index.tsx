@@ -11,7 +11,9 @@ export const Modal = ({ message = "Error" }: ModalProps) => {
         {message}
         <button
           className={styles.modalAction}
-          commandFor="modal"
+          //@ts-ignore
+          commandfor="modal"
+          //@ts-ignore
           command="close"
           type="button"
         >
