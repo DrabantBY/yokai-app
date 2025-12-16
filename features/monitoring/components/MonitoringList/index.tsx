@@ -1,11 +1,14 @@
 "use client";
 
+import { Modal } from "@shared/ui";
 import { useYokaiState, YokaiCard } from "@entities/yokai";
+
+import { createPortal } from "react-dom";
 
 import styles from "./styles.module.scss";
 
 export const MonitoringList = () => {
-  const { data, mutate } = useYokaiState();
+  const { data, mutate, error } = useYokaiState();
 
   return (
     <section>
@@ -16,6 +19,13 @@ export const MonitoringList = () => {
           ))}
         </ul>
       </div>
+
+      {!error
+        ? null
+        : createPortal(
+            <Modal message={error?.message} />,
+            document.getElementById("root")!,
+          )}
     </section>
   );
 };
