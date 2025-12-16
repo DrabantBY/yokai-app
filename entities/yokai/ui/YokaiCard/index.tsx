@@ -1,10 +1,7 @@
 import type { YokaiType } from "@entities/yokai";
-
 import { YOKAI_DANGER, YOKAI_STATUS } from "@entities/yokai";
-
-import { memo } from "react";
-
 import Image from "next/image";
+import { memo } from "react";
 
 import styles from "./styles.module.scss";
 

@@ -1,7 +1,6 @@
-import type { NextRequest } from "next/server";
-
 import { YOKAI_DANGER, YOKAI_STATUS } from "@entities/yokai";
 import { RESPONSE } from "@shared/const";
+import type { NextRequest } from "next/server";
 
 import yokaidb from "@/yokaidb.json";
 
@@ -52,7 +51,7 @@ export async function GET(req: NextRequest) {
 
 export async function PUT(req: NextRequest) {
   try {
-    if (Math.random() < 0.33) {
+    if (Math.random() < 0.5) {
       return new Response(null, RESPONSE[503]);
     }
 

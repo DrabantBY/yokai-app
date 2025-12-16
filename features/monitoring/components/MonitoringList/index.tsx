@@ -1,7 +1,7 @@
 "use client";
 
-import { Modal } from "@shared/ui";
 import { useYokaiState, YokaiCard } from "@entities/yokai";
+import { Modal } from "@shared/ui";
 
 import { createPortal } from "react-dom";
 
@@ -22,10 +22,7 @@ export const MonitoringList = () => {
 
       {!error
         ? null
-        : createPortal(
-            <Modal message={error?.message} />,
-            document.getElementById("root")!,
-          )}
+        : createPortal(<Modal message={error?.message} />, document.body)}
     </section>
   );
 };
