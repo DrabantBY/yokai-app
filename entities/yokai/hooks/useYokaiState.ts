@@ -2,6 +2,8 @@
 
 import type { YokaiType } from "@entities/yokai";
 
+import { yokaiListSchema } from "@entities/yokai";
+
 import { upsertYokai } from "@entities/yokai";
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
@@ -21,13 +23,13 @@ export const useYokaiState = () => {
     const eventSource = new EventSource("/api");
 
     eventSource.onmessage = (event: MessageEvent<string>) => {
-      queryClient.setQueryData<YokaiType.Card[]>(
-        ["yokaiList"],
-        JSON.parse(event.data),
-      );
+      const validData = yokaiListSchema.parse(JSON.parse(event.data));
+
+      queryClient.setQueryData<YokaiType.Card[]>(["yokaiList"], validData);
     };
 
-    eventSource.onerror = () => {
+    eventSource.onerror = (err) => {
+      console.error(err);
       eventSource.close();
     };
 
@@ -36,7 +38,7 @@ export const useYokaiState = () => {
     };
   }, [queryClient]);
 
-  const { mutate } = useMutation({
+  const { mutate, error } = useMutation({
     mutationFn: upsertYokai,
 
     onMutate: async (body) => {
@@ -47,19 +49,18 @@ export const useYokaiState = () => {
       ]);
 
       queryClient.setQueryData<YokaiType.Card[]>(["yokaiList"], (prev = []) =>
-        prev.map((oldYokai) =>
-          oldYokai.name === body.name ? { ...oldYokai, ...body } : oldYokai,
+        prev.map((prevYokai) =>
+          prevYokai.name === body.name ? { ...prevYokai, ...body } : prevYokai,
         ),
       );
 
       return { prevYokaiList };
     },
 
-    onError: (err, body, context) => {
-      console.error("errorMessage:", err.message);
+    onError: (_e, _b, context) => {
       queryClient.setQueryData(["yokaiList"], context?.prevYokaiList);
     },
   });
 
-  return { data, mutate };
+  return { data, mutate, error };
 };
