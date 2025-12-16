@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 
-import { YOKAI_DANGER, YOKAI_STATUS } from "@monitoring/model/enums";
+import { YOKAI_DANGER, YOKAI_STATUS } from "@entities/yokai";
 import yokaidb from "@/yokaidb.json";
 
 export const dynamic = "force-dynamic";
@@ -51,8 +51,9 @@ export async function GET(req: NextRequest) {
 export async function PUT(req: NextRequest) {
   try {
     if (Math.random() < 0.33) {
-      return new Response(JSON.stringify({ error: "random server error" }), {
+      return new Response(null, {
         status: 500,
+        statusText: "random server error",
         headers: { "Content-Type": "application/json" },
       });
     }
@@ -60,8 +61,9 @@ export async function PUT(req: NextRequest) {
     const body = await req.json();
 
     if (!body.name || (!body.status && !body.danger)) {
-      return new Response(JSON.stringify({ error: "yokai data is invalid" }), {
+      return new Response(null, {
         status: 400,
+        statusText: "yokai data is invalid",
         headers: { "Content-Type": "application/json" },
       });
     }
@@ -69,8 +71,9 @@ export async function PUT(req: NextRequest) {
     const yokai = yokaidb.find(({ name }) => name === body.name);
 
     if (!yokai) {
-      return new Response(JSON.stringify({ error: "yokai not found" }), {
+      return new Response(null, {
         status: 404,
+        statusText: "yokai not found",
         headers: { "Content-Type": "application/json" },
       });
     }
@@ -83,8 +86,9 @@ export async function PUT(req: NextRequest) {
       headers: { "Content-Type": "application/json" },
     });
   } catch {
-    return new Response(JSON.stringify({ error: "internal server error" }), {
+    return new Response(null, {
       status: 500,
+      statusText: "internal server error",
       headers: { "Content-Type": "application/json" },
     });
   }

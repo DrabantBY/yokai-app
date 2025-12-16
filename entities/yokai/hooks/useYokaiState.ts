@@ -1,10 +1,14 @@
-import type { YokaiType } from "@monitoring/model/types";
+"use client";
 
-import { useEffect } from "react";
+import type { YokaiType } from "@entities/yokai";
+
+import { upsertYokai } from "@entities/yokai";
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
-export const useQueryYokaiList = () => {
+import { useEffect } from "react";
+
+export const useYokaiState = () => {
   const queryClient = useQueryClient();
 
   const { data } = useQuery<YokaiType.Card[]>({
@@ -33,21 +37,7 @@ export const useQueryYokaiList = () => {
   }, [queryClient]);
 
   const { mutate } = useMutation({
-    mutationFn: async (body: YokaiType.Body) => {
-      const response = await fetch("/api", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to update yokai");
-      }
-
-      return response.json();
-    },
+    mutationFn: upsertYokai,
 
     onMutate: async (body) => {
       await queryClient.cancelQueries({ queryKey: ["yokaiList"] });
@@ -66,7 +56,7 @@ export const useQueryYokaiList = () => {
     },
 
     onError: (err, body, context) => {
-      console.error("error:", err, "body:", body);
+      console.error("errorMessage:", err.message);
       queryClient.setQueryData(["yokaiList"], context?.prevYokaiList);
     },
   });

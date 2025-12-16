@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { YokaiList } from "@monitoring/ui";
+import { MonitoringList } from "@features/monitoring";
 
 export const metadata: Metadata = {
   title: "Monitoring | Yokai App",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function MonitoringPage() {
-  return <YokaiList />;
+  return <MonitoringList />;
 }

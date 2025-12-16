@@ -1,10 +1,8 @@
-"use client";
+import type { YokaiType } from "@entities/yokai";
 
-import type { YokaiType } from "@monitoring/model/types";
+import { YOKAI_DANGER, YOKAI_STATUS } from "@entities/yokai";
 
 import { memo } from "react";
-
-import { YOKAI_DANGER, YOKAI_STATUS } from "@monitoring/model/enums";
 
 import Image from "next/image";
 

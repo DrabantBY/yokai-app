@@ -1,18 +1,16 @@
 "use client";
 
-import { YokaiCard } from "@monitoring/ui";
-import { useQueryYokaiList } from "@monitoring/api";
+import { useYokaiState, YokaiCard } from "@entities/yokai";
 
 import styles from "./styles.module.scss";
 
-export const YokaiList = () => {
-  const { data, mutate } = useQueryYokaiList();
-  console.log("yokaiList:", data);
+export const MonitoringList = () => {
+  const { data, mutate } = useYokaiState();
 
   return (
     <section>
       <div className="__container">
-        <ul className={styles.yokaiList}>
+        <ul className={styles.monitoringList}>
           {data.map((yokai) => (
             <YokaiCard key={yokai.name} {...yokai} mutate={mutate} />
           ))}
