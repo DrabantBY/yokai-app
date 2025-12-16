@@ -1,0 +1,39 @@
+.modalShell {
+  inset-block-end: 5%;
+  min-inline-size: 300px;
+  max-inline-size: 100dvw;
+  margin-inline: auto;
+  padding-inline: 24px;
+  padding-block: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-secondary-text);
+  background-color: var(--clr-secondary-danger);
+  border-radius: 24px;
+  corner-shape: squircle;
+}
+
+.modalMessage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-wrap: nowrap;
+}
+
+.modalAction {
+  inline-size: 28px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-primary-text);
+  border-radius: 24px;
+  corner-shape: squircle;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+

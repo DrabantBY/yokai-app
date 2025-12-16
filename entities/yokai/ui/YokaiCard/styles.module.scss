@@ -1,0 +1,114 @@
+.yokaiCard {
+  padding-inline: 8px;
+  padding-block: 8px;
+  display: flex;
+  gap: 12px;
+  color: var(--clr-primary-text);
+  box-shadow: 0 0 8px 0 currentColor;
+  border-radius: 24px;
+  corner-shape: squircle;
+
+
+
+  &:hover {
+    box-shadow: 0 0 12px 0 currentColor;
+  }
+}
+
+.yokaiFigure {
+  flex-shrink: 0;
+  position: relative;
+  block-size: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+
+  & > img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.yokaiBody {
+  flex-grow: 1;
+  display: grid;
+  row-gap: 4px;
+}
+
+.yokaiTitle {
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid currentColor;
+}
+
+.yokaiText {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  text-transform: initial;
+  flex-grow: 1;
+  line-height: 1.2;
+
+  & > span {
+    font-weight: 600;
+  }
+}
+
+.yokaiControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.yokaiDangerLow,
+.yokaiDangerCritical,
+.yokaiStatus {
+  block-size: 24px;
+  display: block;
+  padding-inline: 8px;
+  align-content: center;
+  text-align: center;
+  border-radius: 24px;
+  corner-shape: squircle;
+  line-height: 24px;
+}
+
+.yokaiDangerLow {
+  color: var(--clr-primary-text);
+  background-color: var(--clr-primary-danger);
+}
+
+.yokaiDangerCritical {
+  color: var(--clr-secondary-text);
+  background-color: var(--clr-secondary-danger);
+  animation: scale 0.5s ease-in-out infinite;
+}
+
+.yokaiStatus {
+  color: var(--clr-secondary-text);
+  background-color: var(--clr-primary-text);
+  text-transform: inherit;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+}
+
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+

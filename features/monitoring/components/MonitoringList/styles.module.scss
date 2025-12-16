@@ -1,0 +1,9 @@
+.monitoringList {
+  margin-block: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  line-height: 1;
+  text-wrap: pretty;
+  text-transform: uppercase;
+}

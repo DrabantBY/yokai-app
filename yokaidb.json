@@ -1,0 +1,107 @@
+[
+  {
+    "name": "satori",
+    "image": "/satori.png",
+    "danger": "LOW",
+    "location": "Mountain forests",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "suzuhiko",
+    "image": "/suzuhiko.png",
+    "danger": "LOW",
+    "location": "Bamboo forests",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "tengu",
+    "image": "/tengu.png",
+    "danger": "LOW",
+    "location": "Mountain peaks",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "bakeneko",
+    "image": "/bakeneko.png",
+    "danger": "LOW",
+    "location": "Abandoned houses",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "fukurokuju",
+    "image": "/fukurokuju.png",
+    "danger": "LOW",
+    "location": "Sacred mountains",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "gashadokuro",
+    "image": "/gashadokuro.png",
+    "danger": "LOW",
+    "location": "Battlefields",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "harionago",
+    "image": "/harionago.png",
+    "danger": "LOW",
+    "location": "City alleys",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "hitotsume",
+    "image": "/hitotsume.png",
+    "danger": "LOW",
+    "location": "Mountain paths",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "isoonna",
+    "image": "/isoonna.png",
+    "danger": "LOW",
+    "location": "Rocky shores",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "karakasa",
+    "image": "/karakasa.png",
+    "danger": "LOW",
+    "location": "Old warehouses",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "kitsune",
+    "image": "/kitsune.png",
+    "danger": "LOW",
+    "location": "Shrines",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "kuchisake",
+    "image": "/kuchisake.png",
+    "danger": "LOW",
+    "location": "Urban bridges",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "oni",
+    "image": "/oni.png",
+    "danger": "LOW",
+    "location": "Mountain caves",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "onibi",
+    "image": "/onibi.png",
+    "danger": "LOW",
+    "location": "Swamps",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "rokurokubi",
+    "image": "/rokurokubi.png",
+    "danger": "LOW",
+    "location": "Traditional inns",
+    "status": "ACTIVE"
+  }
+]

@@ -1,0 +1,101 @@
+:root {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  user-select: none;
+
+  --clr-primary-text: black;
+  --clr-secondary-text: whitesmoke;
+  --clr-primary-danger: #05df72;
+  --clr-secondary-danger: #ff2056;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding-block: 0;
+  padding-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+*::before,
+*::after {
+  font-size: inherit;
+}
+
+html,
+body {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+#root {
+  position: relative;
+  min-block-size: 100dvh;
+  display: flex;
+  flex-direction: column;
+
+  & > main {
+    position: relative;
+    flex-grow: 1;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+dialog, [popover] {
+  border: none;
+}
+
+
+[class$="__container"] {
+  max-inline-size: $xl;
+  margin-inline: auto;
+  padding-inline: 10px;
+
+  @media screen and (width >= $md) {
+    padding-inline: 20px;
+  }
+
+  @media screen and (width >= $lg) {
+    padding-inline: 30px;
+  }
+
+  @media screen and (width >= $xl) {
+    padding-inline: 40px;
+  }
+}
